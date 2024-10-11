@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la base de datos -->
+        <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mariadb://localhost:3306/gestion_usuarios</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Jempynmfs23-1</property>
+
+        <!-- Dialecto específico de la base de datos -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+
+        <!-- Mostrar las consultas SQL generadas por Hibernate -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Actualizar automáticamente las tablas según las entidades -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Incluir tus clases mapeadas -->
+        <mapping class="com.tuapp.model.Usuario"/>
+        <mapping class="com.tuapp.model.Sesion"/>
+
+    </session-factory>
+</hibernate-configuration>
